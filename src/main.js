@@ -3,10 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import  ElementUI from 'element-ui'
+import MyHttpServer from './plugins/http.js'
+import ElementUI from 'element-ui'
+import './assets/scss/index.scss'
 import 'element-ui/lib/theme-chalk/index.css' 
 /* 插件形式调用 */
 Vue.use(ElementUI)
+Vue.use(MyHttpServer)
 
 Vue.config.productionTip = false
 
