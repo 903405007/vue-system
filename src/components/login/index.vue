@@ -26,10 +26,9 @@ export default {
   },
   methods:{
     // 登陆请求
-    handleLogin(){
+    async handleLogin(){
       // 模拟端口
-      this.$http.post(this.$http.default.baseURL+'api/login',this.formdata)
-      .then(res=>{
+        const res=await this.$http.post(this.$http.default.baseURL+'api/login',this.formdata);
         const {data,meta:{msg,status}}=res.data;
         if (status===200) {
           //登陆成功
@@ -40,9 +39,8 @@ export default {
         }else{
           // 提示失败
           this.$message.error(msg);
-
         }
-      });
+      
     }
   }
 };
