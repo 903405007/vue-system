@@ -1,4 +1,10 @@
-# douban
+# vue搭建的后台商城管理系统
+
+##使用vue-cli的webpack搭建
+
+###使用技术：element-ui\vue-router\axios\RAP2模拟数据
+
+##包含页面：登陆页面、首页、正在开发users也
 
 > A Vue.js project
 
