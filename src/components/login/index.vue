@@ -32,9 +32,11 @@ export default {
         const {data,meta:{msg,status}}=res.data;
         if (status===200) {
           //登陆成功
+          // 保存token,
+          localStorage.setItem("token",data.token);
           // 跳转home
-          // 弹出提示
           this.$router.push({name:'home'});
+          // 弹出提示
           this.$message.success(msg);
         }else{
           // 提示失败
